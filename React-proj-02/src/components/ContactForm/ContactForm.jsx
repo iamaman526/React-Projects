@@ -5,6 +5,13 @@ import { MdLocalPhone } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 
 const ContactForm = () => {
+
+ const onSubmit = (e)=>{
+  console.log(e);
+  event.preventDefault();
+ }
+
+
   return (
     <section className={styles.container}>
       <div className={styles.contact_form}>
@@ -22,7 +29,7 @@ const ContactForm = () => {
           icon={<MdOutlineMail fontSize="24px" />}
         />
 
-        <form>
+        <form onSubmit={onSubmit}>
            <div className={styles.form_control} > <label htmlFor="name">Name</label>
           <input type="text" name="name" /></div>
 
@@ -30,7 +37,7 @@ const ContactForm = () => {
           <input type="email" name="email" /></div>
 
           <div className={styles.form_control} > <label htmlFor="name">Text</label>
-          <textarea name="text"   rows="8"/></div>
+          <textarea name="text"   rows="6"/></div>
           <div style={{
             display: "flex",
             justifyContent: "end"

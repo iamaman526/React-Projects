@@ -2,6 +2,8 @@
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top:35px;
+    align-items: end;
 }
 
 .top_btn{
@@ -20,6 +22,8 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-bottom: 40px;
+   
 }
 
 .form_control{
