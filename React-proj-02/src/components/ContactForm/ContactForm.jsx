@@ -6,9 +6,8 @@ import { MdOutlineMail } from "react-icons/md";
 
 const ContactForm = () => {
 
- const onSubmit = (e)=>{
-  console.log(e);
-  event.preventDefault();
+ const onViaCallSubmit =() =>{
+  console.log("i am from call");
  }
 
 
@@ -17,10 +16,14 @@ const ContactForm = () => {
       <div className={styles.contact_form}>
         <div className={styles.top_btn}>
           <Button
+       
             text="VIA SUPPORT CHAT"
             icon={<MdMessage fontSize="24px" />}
           />
-          <Button text="VIA CALL" icon={<MdLocalPhone fontSize="24px" />} />
+      
+          <Button 
+           onClick= { onViaCallSubmit}
+          text="VIA CALL" icon={<MdLocalPhone fontSize="24px" />} />
         </div>
 
         <Button
@@ -29,7 +32,7 @@ const ContactForm = () => {
           icon={<MdOutlineMail fontSize="24px" />}
         />
 
-        <form onSubmit={onSubmit}>
+        <form>
            <div className={styles.form_control} > <label htmlFor="name">Name</label>
           <input type="text" name="name" /></div>
 
