@@ -13,12 +13,9 @@ const ContactForm = () => {
 
 
 
-
-  
-
 //  const onViaCallSubmit =() =>{
 //   console.log("i am from call");
-//  }
+//  }  example
  
 const onSubmit =(event)=>{
    event.preventDefault()
